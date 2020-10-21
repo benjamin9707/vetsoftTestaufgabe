@@ -1,0 +1,262 @@
+﻿$black: #4c4c4c;
+$blue: #004888;
+$red: #be1a25;
+$white: #ffffff;
+
+html {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c8c8c8+0,c8c8c8+100&0+0,0.5+63,1+100,1+100 */
+    background: -moz-linear-gradient(top, rgba(200,200,200,0) 0%, rgba(200,200,200,0.5) 63%, rgba(200,200,200,1) 100%); /* FF3.6-15 */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(200,200,200,0)), color-stop(63%,rgba(200,200,200,0.5)), color-stop(100%,rgba(200,200,200,1))); /* Chrome4-9,Safari4-5 */
+    background: -webkit-linear-gradient(top, rgba(200,200,200,0) 0%,rgba(200,200,200,0.5) 63%,rgba(200,200,200,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: -o-linear-gradient(top, rgba(200,200,200,0) 0%,rgba(200,200,200,0.5) 63%,rgba(200,200,200,1) 100%); /* Opera 11.10-11.50 */
+    background: -ms-linear-gradient(top, rgba(200,200,200,0) 0%,rgba(200,200,200,0.5) 63%,rgba(200,200,200,1) 100%); /* IE10 preview */
+    background: linear-gradient(to bottom, rgba(200,200,200,0) 0%,rgba(200,200,200,0.5) 63%,rgba(200,200,200,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00c8c8c8', endColorstr='#c8c8c8',GradientType=0 ); /* IE6-9 */
+    /*background-image:url(../images/bg-pattern.png);*/
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-position: 0 0;
+    font-size: 16px;
+}
+
+html,
+*,
+a {
+    color: $black;
+    font-family: "Segoe UI",SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    letter-spacing: 0px;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+body {
+    background-color: transparent;
+    display: grid;
+    font-size: 14px;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+h1 {
+    color: $blue;
+    font-size: 1.875rem;
+    margin: 0;
+    padding-bottom: 2rem;
+}
+
+main {
+    display: flex;
+    align-items: stretch;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .subnav {
+        flex: 0 1 25%;
+    }
+
+    .content {
+        background-color: $white;
+        flex: 1 0 0%;
+    }
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    label {
+        flex: 0 1 20%;
+        font-size: 1rem;
+        font-weight: 700;
+        margin: 0;
+        padding-top: .5rem;
+    }
+
+    .input {
+        flex: 1 0 80%;
+        font-size: 1rem;
+    }
+
+    &:last-of-type {
+        justify-content: flex-end;
+    }
+}
+
+span {
+    color: $red;
+    font-size: .75rem;
+    font-weight: 400;
+
+    #FirstName-error::before,
+    #LastName-error::before,
+    #Adress-error::before,
+    #Zipcode-error::before,
+    #City-error::before {
+        content: "!";
+        padding-right: 1px;
+    }
+}
+
+.btn {
+    border-radius: .125rem;
+    color: $white;
+    fill: $white;
+    margin-left: 1rem;
+    opacity: 1;
+
+    &:hover {
+        opacity: .8;
+    }
+
+    &.btn-primary {
+        background-color: $blue;
+        border-color: $blue;
+    }
+
+    &.btn-danger {
+        background-color: $red;
+        border-color: $red;
+    }
+
+    &.btn-secondary {
+        background-color: $black;
+        border-color: $black;
+    }
+
+    span {
+        color: $white;
+        font-size: 1rem;
+        margin-left: .75rem;
+    }
+}
+
+.table {
+    thead {
+        tr {
+            th {
+                border-width: 0;
+                font-size: 1rem;
+                font-weight: 500;
+                vertical-align: middle;
+            }
+
+            th:first-of-type {
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            td {
+                vertical-align: middle;
+
+                span {
+                    color: $black;
+                    display: block;
+                    font-size: 1rem;
+                    padding: .4rem 0px;
+                }
+            }
+
+            td:last-of-type {
+                text-align: right;
+            }
+        }
+    }
+}
+
+.navbar {
+    background-color: $white;
+
+    .navbar-brand {
+        padding: 15px 20px 0;
+
+        &.active {
+            background-color: $blue;
+            color: $white;
+            fill: $white;
+        }
+    }
+
+    .navbar-nav {
+        .nav-link {
+            padding-right: .5rem;
+            padding-left: .5rem;
+        }
+    }
+
+    a {
+        position: relative;
+        display: block;
+        height: 80px;
+        padding: 20px 10px 0 10px;
+        font-size: 1.45rem;
+        line-height: 1.8em;
+        vertical-align: text-bottom;
+        text-transform: uppercase;
+
+        :hover {
+            color: $blue;
+        }
+
+        &.active {
+            background-color: $blue;
+            color: $white;
+            fill: $white;
+        }
+    }
+
+    .navbar-toggler {
+        border-color: $blue;
+        color: $blue;
+        left: -50%;
+        position: relative;
+        right: -50%;
+        top: 0;
+
+        .navbar-toggler-icon {
+            color: $blue;
+            fill: $blue;
+        }
+
+        &:hover,
+        &:focus,
+        .navbar-toggler-icon:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    .navbar-text {
+        color: $blue;
+        font-size: 2rem;
+        font-weight: 400;
+        position: relative;
+        right: 0;
+        top: .25rem;
+    }
+}
+
+.subnav {
+    a {
+        border-top: 1px solid #d9d9d9;
+        display: block;
+        font-size: 1rem;
+        padding: 15px 30px;
+        text-transform: uppercase;
+
+        &:hover {
+            background-color: #ccc;
+        }
+
+        &.active {
+            background-color: #4c4c4c;
+            color: #fff;
+        }
+    }
+}

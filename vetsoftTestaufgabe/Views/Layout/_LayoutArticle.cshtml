@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Testaufgabe</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <section class="container p-0">
+            <partial name="Navigation" />
+        </section>
+    </header>
+
+    <main>
+        <section class="container p-0 grid">
+            <div class="subnav p-3 text-left">
+                <partial name="SubNavigation" />
+            </div>
+            <div class="content bg-white p-3">
+                @RenderBody()
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-3">
+        <section class="container bg-white text-right pt-3 pb-3">
+            &copy; 2020 - Testaufgabe für <a href="http://www.vetsoft.one" target="_blank">www.vetsoft.one</a>
+        </section>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
