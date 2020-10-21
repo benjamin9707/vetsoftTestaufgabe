@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace vetsoftTestaufgabe.Models
 {
@@ -22,7 +23,7 @@ namespace vetsoftTestaufgabe.Models
         [Display(Name = "Adresse", Prompt = "Adresse")]
         [StringLength(50, MinimumLength = 3, ErrorMessage = "! Ihre Adresse muss eine Zeichenfolge von mindestens 3 bis 50 Zeichen haben.")]
         [Required(ErrorMessage = "Geben Sie Ihre Adresse ein.")]
-        public string Adress { get; set; }
+        public string Address { get; set; }
 
         [Display(Name = "PLZ")]
         [StringLength(5, MinimumLength = 5, ErrorMessage = "&iquest; Ihre gültige Postleitzahl muss eine Zeichenfolge 5 Zeichen haben.")]

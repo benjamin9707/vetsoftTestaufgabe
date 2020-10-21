@@ -12,11 +12,11 @@ namespace vetsoftTestaufgabe.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    FirstName = table.Column<string>(nullable: true),
-                    LastName = table.Column<string>(nullable: true),
-                    Adress = table.Column<string>(nullable: true),
-                    Zipcode = table.Column<string>(nullable: true),
-                    City = table.Column<string>(nullable: true)
+                    FirstName = table.Column<string>(maxLength: 50, nullable: false),
+                    LastName = table.Column<string>(maxLength: 50, nullable: false),
+                    Address = table.Column<string>(maxLength: 50, nullable: false),
+                    Zipcode = table.Column<string>(maxLength: 5, nullable: false),
+                    City = table.Column<string>(maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
