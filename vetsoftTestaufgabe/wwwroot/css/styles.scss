@@ -1,8 +1,17 @@
-﻿$black: #4c4c4c;
+﻿
+/*** Global Colors ***/
+$black: #4c4c4c;
 $blue: #004888;
 $red: #be1a25;
 $white: #ffffff;
 
+.color-blue {
+    color: $blue;
+}
+
+
+
+/*** START: Auszug aus dem Design der WDT-Website (QUELLE: https://www.wdt.de/) ***/
 html {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c8c8c8+0,c8c8c8+100&0+0,0.5+63,1+100,1+100 */
     background: -moz-linear-gradient(top, rgba(200,200,200,0) 0%, rgba(200,200,200,0.5) 63%, rgba(200,200,200,1) 100%); /* FF3.6-15 */
@@ -36,7 +45,11 @@ body {
     grid-template-rows: auto 1fr auto;
     height: 100vh;
 }
+/*** END: Auszug aus dem Design der WDT-Website (QUELLE: https://www.wdt.de/) ***/
 
+
+
+/*** Base Design ***/
 h1 {
     color: $blue;
     font-size: 1.875rem;
@@ -49,6 +62,9 @@ main {
     align-items: stretch;
 }
 
+
+
+/*** Grid Design ***/
 .grid {
     display: flex;
     flex-wrap: wrap;
@@ -64,6 +80,9 @@ main {
     }
 }
 
+
+
+/*** Form Design ***/
 .form {
     display: flex;
     flex-wrap: wrap;
@@ -87,6 +106,9 @@ main {
     }
 }
 
+
+
+/*** Form Exeption Message Design ***/
 span {
     color: $red;
     font-size: .75rem;
@@ -102,6 +124,9 @@ span {
     }
 }
 
+
+
+/*** Button Design ***/
 .btn {
     border-radius: .125rem;
     color: $white;
@@ -135,6 +160,9 @@ span {
     }
 }
 
+
+
+/*** Table Design ***/
 .table {
     thead {
         tr {
@@ -170,6 +198,9 @@ span {
     }
 }
 
+
+
+/*** Navigation Design ***/
 .navbar {
     background-color: $white;
 
@@ -242,6 +273,9 @@ span {
     }
 }
 
+
+
+/*** Subnavigation Design ***/
 .subnav {
     a {
         border-top: 1px solid #d9d9d9;
@@ -260,3 +294,4 @@ span {
         }
     }
 }
+
